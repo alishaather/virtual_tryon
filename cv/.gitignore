@@ -1,0 +1,7 @@
+venv/
+captures/
+study_output/
+__pycache__/
+.pytest_cache/
+shot*.jpg
+profile.json

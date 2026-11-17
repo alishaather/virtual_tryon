@@ -1,0 +1,17 @@
+{
+  "height_cm": 165.0,
+  "shoulder_width_cm": 38.6,
+  "chest_circumference_cm": 91.0,
+  "waist_circumference_cm": 83.5,
+  "hip_circumference_cm": 98.5,
+  "arm_length_cm": 50.8,
+  "torso_length_cm": 51.0,
+  "cm_per_pixel": 0.3055,
+  "confidence": 0.93,
+  "captured_at": "2026-11-03T20:47:43+00:00",
+  "sizing": "women",
+  "clothing": "fitted",
+  "calibrated": false,
+  "warnings": [],
+  "schema_version": 2
+}
