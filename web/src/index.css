@@ -47,3 +47,36 @@ label {
   background: #bbb;
   cursor: not-allowed;
 }
+
+
+.question {
+  margin: 28px 0 8px;
+  font-weight: 600;
+}
+
+.options {
+  display: flex;
+  gap: 10px;
+}
+
+.option {
+  flex: 1;
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #999;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+}
+
+.option.selected {
+  border-color: #5b3cc4;
+  background: #ece7fb;
+  font-weight: 600;
+}
+
+.hint {
+  margin: -4px 0 8px;
+  font-size: 14px;
+  color: #666;
+}

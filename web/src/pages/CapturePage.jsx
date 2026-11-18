@@ -2,10 +2,9 @@ import { Navigate } from 'react-router-dom'
 import { useMeasure } from '../context/MeasureContext'
 
 function CapturePage() {
-  const { heightCm } = useMeasure()
+  const { heightCm, sizing, clothing } = useMeasure()
 
-  // if the page was refreshed there is no height, go back
-  if (heightCm === null) {
+  if (heightCm === null || sizing === null || clothing === null) {
     return <Navigate to="/" replace />
   }
 
@@ -13,6 +12,7 @@ function CapturePage() {
     <div className="page">
       <h1>Capture</h1>
       <p>Height: {heightCm} cm</p>
+      <p>Sizing: {sizing}, clothing: {clothing}</p>
       <p>camera comes here</p>
     </div>
   )

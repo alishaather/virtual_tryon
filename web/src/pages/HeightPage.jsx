@@ -32,7 +32,7 @@ function HeightPage() {
     e.preventDefault()
     if (!isValid) return
     setHeightCm(height)
-    navigate('/capture')
+    navigate('/setup')
   }
 
   return (
