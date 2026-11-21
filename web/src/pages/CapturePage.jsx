@@ -109,7 +109,7 @@ function CapturePage() {
           className="mirror"
           onLoadedData={(e) => {
             setReady(true)
-            setInfo(e.target.ideoWidth + 'x' + e.target.videoHeight)  
+            setInfo(e.target.videoWidth + 'x' + e.target.videoHeight)  
           }}
         />
         {photo && (
