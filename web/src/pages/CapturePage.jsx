@@ -9,6 +9,7 @@ function CapturePage() {
   const [ready, setReady] = useState(false)
   const [error, setError] = useState('')
   const [photo, setPhoto] = useState(null)
+  const [info, setInfo] = useState('')
 
   useEffect(() => {
     let cancelled = false
@@ -24,6 +25,7 @@ function CapturePage() {
             facingMode: 'user',
             width: { ideal: 1080 },
             height: { ideal: 1920 },
+            aspectRatio: { ideal:9/16 },
           },
           audio: false,
         })
@@ -94,6 +96,8 @@ function CapturePage() {
         Height: {heightCm} cm · {sizing} · {clothing}
       </p>
 
+      {info && <p className="hint">Camera: {info}</p>}
+
       {error && <p className="error">{error}</p>}
 
       <div className="camera-box">
@@ -103,7 +107,10 @@ function CapturePage() {
           playsInline
           muted
           className="mirror"
-          onLoadedData={() => setReady(true)}
+          onLoadedData={(e) => {
+            setReady(true)
+            setInfo(e.target.ideoWidth + 'x' + e.target.videoHeight)  
+          }}
         />
         {photo && (
           <img src={photo.url} alt="Captured" className="mirror photo-layer" />
