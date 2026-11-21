@@ -88,7 +88,7 @@ function CapturePage() {
   }
 
   return (
-    <div className="page">
+    <div className="page wide">
       <h1>Capture</h1>
       <p>
         Height: {heightCm} cm · {sizing} · {clothing}
@@ -102,10 +102,12 @@ function CapturePage() {
           autoPlay
           playsInline
           muted
-          className={photo ? 'hidden' : 'mirror'}
+          className="mirror"
           onLoadedData={() => setReady(true)}
         />
-        {photo && <img src={photo.url} alt="Captured" className="mirror" />}
+        {photo && (
+          <img src={photo.url} alt="Captured" className="mirror photo-layer" />
+        )}
       </div>
 
       {photo ? (
